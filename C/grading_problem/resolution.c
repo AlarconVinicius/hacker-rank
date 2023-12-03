@@ -10,7 +10,9 @@ int *gradingStudents(int grades_count, int* grades, int* result_count)
 	result = malloc(sizeof(int) * grades_count);
 	while (i < grades_count)
 	{
-		if ((grades[i] + 2) % 5 == 0 && (grades[i] + 2) >= 40)
+		if ((grades[i] + 1) % 5 == 0 && (grades[i] + 1) >= 40)
+			result[i] = grades[i] + 1;
+		else if ((grades[i] + 2) % 5 == 0 && (grades[i] + 2) >= 40)
 			result[i] = grades[i] + 2;
 		else
 			result[i] = grades[i];
